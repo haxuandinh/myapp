@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loader</title>
+</head>
+<body>
+<h2>Đang tải ứng dụng...</h2>
+
+<script>
+document.addEventListener("deviceready", function(){
+
+    var path = "file:///storage/emulated/0/Download/myapp/dev.html";
+
+    fetch(path)
+    .then(() => window.location.href = path)
+    .catch(() => console.log("Không tìm thấy file ngoài"));
+
+});
+</script>
+
+</body>
+</html>
